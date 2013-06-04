@@ -1,4 +1,3 @@
-
 import cancelTax.CancelTaxRequest;
 import getTax.GetTaxRequest;
 import getTax.GetTaxTest;
@@ -13,18 +12,18 @@ public class Program {
 	
 	public static void main(String args[]){
 	
-		System.out.print(">>Address Validation (should be error): ");	
+		System.out.print("Address Validation (should be error): ");	
 		ValidateAddressTest.Validate(baseURL, username, password, DocumentLoader.LoadInvalidAddress());
 		
-		System.out.print(">>Address Validation (should be success): ");		
+		System.out.print("Address Validation (should be success): ");		
 		ValidateAddressTest.Validate(baseURL, username, password, DocumentLoader.LoadValidAddress());
 
 		
 		GetTaxRequest taxreq = DocumentLoader.LoadTaxRequest();
-		System.out.print(">>Tax Calculation: ");
+		System.out.print("Tax Calculation: ");
 		GetTaxTest.GetTax(baseURL, username, password, taxreq);
 		
-		System.out.print(">>Cancel Tax: ");
+		System.out.print("Cancel Tax: ");
 		CancelTaxRequest cancelReq = DocumentLoader.LoadCancelRequest(taxreq);
 		cancelTax.CancelTaxTest.CancelTax(baseURL, username, password, cancelReq);
 
