@@ -5,10 +5,8 @@ import commonResponse.CommonResponse.SeverityLevel;
 
 public class CancelTaxResponse {
 	public CancelTaxResult CancelTaxResult;
-	
-	public CancelTaxResult getCancelTaxResult(){return CancelTaxResult;}
-	
-	public void setCancelTaxResult(CancelTaxResult cancelTaxResult){CancelTaxResult = cancelTaxResult;}
+	public SeverityLevel ResultCode;
+	public Message[] Messages;
 	
 	public class CancelTaxResult
 	{

@@ -54,9 +54,9 @@ public class CancelTaxTest{
 			if(conn.getResponseCode() != 200) //Note: tax/cancel will return a 200 response even if the document could not be cancelled. Special attention needs to be paid to the ResultCode.
 			{
 				CancelTaxResponse res = mapper.readValue(conn.getErrorStream(), CancelTaxResponse.class);
-				for(int i = 0; i<res.CancelTaxResult.Messages.length; i++)
+				for(int i = 0; i<res.Messages.length; i++)
 				{
-					System.out.println(res.CancelTaxResult.ResultCode +": "+res.CancelTaxResult.Messages[0].Summary);
+					System.out.println(res.ResultCode +": "+res.Messages[i].Summary);
 				}
 				return res;
 			}	
