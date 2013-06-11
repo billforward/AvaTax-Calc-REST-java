@@ -1,5 +1,4 @@
 
-
 import getTax.GetTaxRequest;
 import getTax.GetTaxRequest.DetailLevel;
 import getTax.GetTaxRequest.DocType;
@@ -76,7 +75,7 @@ public class DocumentLoader {
 	            getTaxRequest.PurchaseOrderNo="PO 23423";					// O: Specifies the purchase order number associated with the transaction. This value can be used to track single-use exemption certficates.
 	            getTaxRequest.ReferenceCode="";								// O: This is a reportable value that does not affect tax calculation.
 	            getTaxRequest.PosLaneCode="";								// O: This is a reportable value that does not affect tax calculation.
-	            //getTaxRequest.TaxOverride=new TaxOverrideDef=);			// O: Allows the TaxDate =or other values) to be overridden for tax calculation. Situational only.				
+	            //getTaxRequest.TaxOverride=new TaxOverrideDef();			// O: Allows the TaxDate =or other values) to be overridden for tax calculation. Situational only.				
 	            //getTaxRequest.BusinessIdentificationNo="";				// O: Specified VAT ID of customer for international/VAT calculations and reporting.
 	            
 	            
@@ -113,7 +112,7 @@ public class DocumentLoader {
 //	            origin.Latitude="47.6253";
 //	            origin.Longitude="-122.515114";
 //
-//	            Address destination = new BaseAddress=;
+//	            Address destination = new BaseAddress();
 //	            destination.AddressCode="Destination";
 //	            destination.Latitude="39.833597";
 //	            destination.Longitude="-104.917220";
