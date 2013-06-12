@@ -18,7 +18,7 @@ public class DocumentLoader {
 
 	public static Address LoadInvalidAddress()
 	{
-		//creates an invalid address for address validation testing
+		//Creates an invalid address for address validation testing
 		Address address = new Address();
 		address.Line1 = "PO Box 12345";
 		address.City = "Bainbridge Island";
@@ -27,7 +27,7 @@ public class DocumentLoader {
 	}
 	public static Address LoadValidAddress()
 	{
-		//creates a valid address for address validation testing
+		//Creates a valid address for address validation testing
 		Address address = new Address();
 		address.Line1 = "425 Ericksen Ave";
 		address.City = "Bainbridge Island";
@@ -40,11 +40,11 @@ public class DocumentLoader {
 	{
 		CancelTaxRequest cancelTaxRequest = new CancelTaxRequest();
 
-		cancelTaxRequest.CompanyCode=taxreq.CompanyCode;// R: Company Code from the accounts Admin Console
-        cancelTaxRequest.DocCode=taxreq.DocCode;              // R: Invoice or document tracking number - Must be unique
-        cancelTaxRequest.DocType=taxreq.DocType;    // R: Typically SalesOrder,SalesInvoice, ReturnInvoice
-        cancelTaxRequest.CancelCode=CancelCode.DocVoided;    // R: Typically Unspecified, PostFailed, DocDeleted, 
-                                                                 //      DocVoided or AdjustmentCancelled
+		cancelTaxRequest.CompanyCode=taxreq.CompanyCode;		// R: Company Code from the accounts Admin Console
+        cancelTaxRequest.DocCode=taxreq.DocCode;              	// R: Invoice or document tracking number - Must be unique
+        cancelTaxRequest.DocType=taxreq.DocType;    			// R: Typically SalesOrder,SalesInvoice, ReturnInvoice
+        cancelTaxRequest.CancelCode=CancelCode.DocVoided;   	// R: Typically Unspecified, PostFailed, DocDeleted, 
+                                                                //    DocVoided or AdjustmentCancelled
 		
 		return cancelTaxRequest;
 		
@@ -54,16 +54,16 @@ public class DocumentLoader {
 		GetTaxRequest getTaxRequest = new GetTaxRequest();
 	
 		//Document Level Setup  
-//	     R: indicates Required Element
-//	     O: Indicates Optional Element
-	//
+		//	     R: indicates Required Element
+		//	     O: Indicates Optional Element
+		//
 
 	            // Set the tax document properties - Required unless noted as Optional
-	            getTaxRequest.CompanyCode="SDK";                        // R: Company Code from the accounts Admin Console
+	            getTaxRequest.CompanyCode="SDK";                        	// R: Company Code from the accounts Admin Console
 	            getTaxRequest.Client="AvaTaxCalcRESTJava Sample";
 	            java.util.Date utilDate = new java.util.Date();
 	            Date docDate = new Date(utilDate.getTime());                
-	            getTaxRequest.DocCode= "SampleDoc: " + utilDate.toString();  			// R: Invoice or document tracking number - Must be unique
+	            getTaxRequest.DocCode= "SampleDoc: " + utilDate.toString(); // R: Invoice or document tracking number - Must be unique
 	            getTaxRequest.DocType=DocType.SalesInvoice;                	// R: Typically SalesOrder,SalesInvoice, ReturnInvoice
 	            getTaxRequest.DocDate = docDate;                            // R:  sets reporting date and default tax date
 	            getTaxRequest.CustomerCode="TaxSvcTest";                   	// R: String - Customer Tracking number or Exemption Customer Code
@@ -105,8 +105,8 @@ public class DocumentLoader {
 
 	//
 	// Alternate:  Latitude / Longitude addressing
-//	         
-//	            
+	//	         
+	//	            
 //	            Address origin = new BaseAddress=;
 //	            origin.AddressCode="Origin";
 //	            origin.Latitude="47.6253";
@@ -118,43 +118,43 @@ public class DocumentLoader {
 //	            destination.Longitude="-104.917220";
 //				Address[] addresses = {origin, destination};	            
 
-//	          End Address Section
+	 //	          End Address Section
 
 	            getTaxRequest.Addresses=addresses;
 
 	            // Add invoice lines
 	            
-	            Line line1 = new Line();                               // New instance of a line                                
-	            line1.LineNo="101";                              // R: string - line Number of invoice - must be unique.
-	            line1.ItemCode="Item001";                   // R: string - SKU or short name of Item
-	            line1.Qty=new BigDecimal(1);               // R: decimal - The number of items -- Qty of product sold. Does not function as a mulitplier for Amount
-	                                                         //               see http://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html regarding
-	                                                        //                the use of BigDecimal. BigDecimal class provides operations for arithmetic, scale
-	                                                       //                 manipulation, rounding, comparison, hashing, and format conversion
-	            line1.Amount=new BigDecimal(1000.00);  // R: decimal - the "NET" amount -- Amount should be the 'extended' or 'net' amount
-	            line1.CustomerUsageType="";           // O: string - AKA Entity Use Code - Typically A - L =G = Reseller)
-	            line1.Description="ITEM1";           // O: string - Description or category of item sold.
-	            line1.TaxCode="";                   // O: string - Pass standard, custom or Pro-Tax code
-	                                                  //              Can be NULL to default to tangible personal property =P0000000)
-	            line1.OriginCode="Origin";                      	// R: Value representing the Origin Address
-	            line1.DestinationCode="Dest";                 	  	// R: Value representing the Destination Address
+	            Line line1 = new Line();                               		// New instance of a line                                
+	            line1.LineNo="101";                              			// R: string - line Number of invoice - must be unique.
+	            line1.ItemCode="Item001";                   				// R: string - SKU or short name of Item
+	            line1.Qty=new BigDecimal(1);               					// R: decimal - The number of items -- Qty of product sold. Does not function as a mulitplier for Amount
+	                                                         				//              see http://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html regarding
+	                                                        				//              the use of BigDecimal. BigDecimal class provides operations for arithmetic, scale
+	                                                       					//              manipulation, rounding, comparison, hashing, and format conversion
+	            line1.Amount=new BigDecimal(1000.00);  						// R: decimal - the "NET" amount -- Amount should be the 'extended' or 'net' amount
+	            line1.CustomerUsageType="";           						// O: string - AKA Entity Use Code - Typically A - L =G = Reseller)
+	            line1.Description="ITEM1";           						// O: string - Description or category of item sold.
+	            line1.TaxCode="";                   						// O: string - Pass standard, custom or Pro-Tax code
+	                                                  						//             Can be NULL to default to tangible personal property =P0000000)
+	            line1.OriginCode="Origin";                      			// R: Value representing the Origin Address
+	            line1.DestinationCode="Dest";                 	  			// R: Value representing the Destination Address
 
 	            //Line 2 - Shipping/Freight line - See property descriptions above
-	            Line line2 = new Line();                                   // New instance of a line
-	            line2.LineNo="102";                                   // R: string - SKU or short name of Item
-	            line2.ItemCode="Shipping";                       // R: string - SKU or short name of Item
-	            line2.Description="Shipping- Freight Charges";  // O: string - Description or category of item sold.
-	            line2.Qty=new BigDecimal(1);                   // R: decimal - The number of items -- Qty of product sold. Does not function as a mulitplier for Amount
-	                                                             //               see http://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html regarding
-	                                                            //                the use of BigDecimal. BigDecimal class provides operations for arithmetic, scale
-	                                                           //                 manipulation, rounding, comparison, hashing, and format conversion
-	            line2.Amount=new BigDecimal(10.00);        // R: decimal - the "NET" amount -- Amount should be the 'extended' or 'net' amount
-	            line2.TaxCode="FR";                       // O: string - Pass standard, custom or Pro-Tax code FR020100
-	            line2.OriginCode="Origin";                      	// R: Value representing the Origin Address
-	            line2.DestinationCode="Dest";                 	  	// R: Value representing the Destination Address
+	            Line line2 = new Line();                                   	// New instance of a line
+	            line2.LineNo="102";                                   		// R: string - SKU or short name of Item
+	            line2.ItemCode="Shipping";                       			// R: string - SKU or short name of Item
+	            line2.Description="Shipping- Freight Charges";  			// O: string - Description or category of item sold.
+	            line2.Qty=new BigDecimal(1);                   				// R: decimal - The number of items -- Qty of product sold. Does not function as a mulitplier for Amount
+	                                                             			//              see http://docs.oracle.com/javase/6/docs/api/java/math/BigDecimal.html regarding
+	                                                            			//              the use of BigDecimal. BigDecimal class provides operations for arithmetic, scale
+	                                                           				//              manipulation, rounding, comparison, hashing, and format conversion
+	            line2.Amount=new BigDecimal(10.00);        					// R: decimal - the "NET" amount -- Amount should be the 'extended' or 'net' amount
+	            line2.TaxCode="FR";                       					// O: string - Pass standard, custom or Pro-Tax code FR020100
+	            line2.OriginCode="Origin";                      			// R: Value representing the Origin Address
+	            line2.DestinationCode="Dest";                 	  			// R: Value representing the Destination Address
 
 	            Line[] lines = {line1, line2};
-	            getTaxRequest.Lines = lines;            // Sets array of lines
+	            getTaxRequest.Lines = lines;            					// Sets array of lines
 		
 		
 		return getTaxRequest;
