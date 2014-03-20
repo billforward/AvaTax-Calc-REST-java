@@ -1,10 +1,11 @@
-package getTax;
+package TaxSvc;
 
 
 import java.math.BigDecimal;
 import java.sql.Date;
 
-import validateAddress.Address;
+import AddressSvc.Address;
+import TaxSvc.TaxSvc.DocType;
 
 public class GetTaxRequest {
 	//Required for tax calculation
@@ -17,7 +18,7 @@ public class GetTaxRequest {
     public DocType DocType;
     public String CompanyCode;
     public Boolean Commit;
-    public DetailLevel DetailLevel;
+    public TaxSvc.DetailLevel DetailLevel;
     public String Client;
     //Use where appropriate to the situation
     public String CustomerUsageType;
@@ -30,39 +31,9 @@ public class GetTaxRequest {
     public String PurchaseOrderNo;
     public String PaymentDate;
     public String ReferenceCode;								
-    public String PosLaneCode;								
-
-
-    
-    public static class Line{
-        public String LineNo; //Required
-        public String DestinationCode; //Required
-        public String OriginCode; //Required
-        public String ItemCode; //Required
-        public BigDecimal Qty; //Required
-        public BigDecimal Amount; //Required
-        public String TaxCode; //Best practice
-        public String CustomerUsageType;
-        public String Description; //Best Practice
-        public Boolean Discounted;
-        public Boolean TaxIncluded;
-        public String Ref1;
-        public String Ref2;
-        
-        
-    }
-    public static class TaxOverrideDef
-    {
-    	public String TaxOverrideType; //Limited permitted values: TaxAmount, Exemption, TaxDate
-    	public String Reason;
-    	public String TaxAmount; //If included, must be valid decimal
-    	public String TaxDate; //If included, must be valid date 
-    	   	
-    	
-    }
-    
-    public enum DocType { SalesOrder, SalesInvoice, ReturnOrder, ReturnInvoice, PurchaseOrder, PurchaseInvoice };
-    public enum DetailLevel { Tax, Document, Line, Diagnostic };
+    public String PosLaneCode;
+	public String CurrencyCode;								
+ 
     public enum SystemCustomerUsageType
     { 
         L,//"Other",

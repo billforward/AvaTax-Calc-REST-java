@@ -1,6 +1,6 @@
-package validateAddress;
+package AddressSvc;
 
-import commonResponse.CommonResponse;
+import AddressSvc.CommonResponse;
 
 public class ValidateResult {
 	public Address Address;

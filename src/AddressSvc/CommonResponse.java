@@ -1,4 +1,4 @@
-package commonResponse;
+package AddressSvc;
 
 public class CommonResponse {
 	public static class Message{
@@ -24,7 +24,5 @@ public class CommonResponse {
 	}
 	public enum SeverityLevel
 	{Success, Warning, Error, Exception;}
-	
-	
 
 }

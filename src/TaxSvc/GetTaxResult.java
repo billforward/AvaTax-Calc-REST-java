@@ -1,8 +1,7 @@
-package getTax;
+package TaxSvc;
 
 import java.util.Date;
 
-import commonResponse.CommonResponse;
 
 
 public class GetTaxResult {

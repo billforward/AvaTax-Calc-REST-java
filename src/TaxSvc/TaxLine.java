@@ -1,6 +1,6 @@
-package getTax;
+package TaxSvc;
 
-import getTax.TaxDetail;
+import TaxSvc.TaxDetail;
 
 public class TaxLine //Nested in GetTaxResult object
 {

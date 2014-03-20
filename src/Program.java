@@ -1,32 +1,24 @@
-import cancelTax.CancelTaxRequest;
-import getTax.GetTaxRequest;
-import getTax.GetTaxTest;
-import validateAddress.ValidateAddressTest;
-
-
-
-public class Program {
-	static String baseURL = "https://development.avalara.net/1.0/";
-	static String username = "";	//TODO: this should be your Avatax Account Number e.g. 1100012345
-	static String password = "";	//TODO: this should be the license key for the account above, e.g. 23CF4C53939C9725
-	
+public class Program {	
 	public static void main(String args[]){
-	
-		System.out.print("Address Validation (should be error): ");	
-		ValidateAddressTest.Validate(baseURL, username, password, DocumentLoader.LoadInvalidAddress());
-		
-		System.out.print("Address Validation (should be success): ");		
-		ValidateAddressTest.Validate(baseURL, username, password, DocumentLoader.LoadValidAddress());
-
-		
-		GetTaxRequest taxreq = DocumentLoader.LoadTaxRequest();
-		System.out.print("Tax Calculation: ");
-		GetTaxTest.GetTax(baseURL, username, password, taxreq);
-		
-		System.out.print("Cancel Tax: ");
-		CancelTaxRequest cancelReq = DocumentLoader.LoadCancelRequest(taxreq);
-		cancelTax.CancelTaxTest.CancelTax(baseURL, username, password, cancelReq);
-
+		 try
+         {
+             // Each test is managed in its own class 
+             // Make sure you enter your valid credentials in that test class.
+             GetTaxTest.Test();
+             CancelTaxTest.Test();
+             EstimateTaxTest.Test();
+             PingTest.Test();
+             ValidateAddressTest.Test();
+         }
+         catch (Exception ex)
+         { 
+             System.out.println("An Exception Occured: " + ex.getMessage()); 
+         }
+         finally
+         {
+        	 System.out.println("Done");
+        	 System.out.println();
+         }
 	}
 	
 

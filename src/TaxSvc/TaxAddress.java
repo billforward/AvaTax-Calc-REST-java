@@ -1,4 +1,4 @@
-package getTax;
+package TaxSvc;
 
 public class TaxAddress //Nested in GetTaxResult object
 {

@@ -1,4 +1,4 @@
-package validateAddress;
+package AddressSvc;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
