@@ -1,7 +1,7 @@
 AvaTax-REST-Java
 =====================
 
-This is a set of cURL sample requests and expected responses demonstrating the [AvaTax REST API](http://developer.avalara.com/api-docs/rest) methods:
+This is a set of Java sample requests demonstrating the [AvaTax REST API](http://developer.avalara.com/api-docs/rest) methods:
  [tax/get POST](http://developer.avalara.com/api-docs/rest/tax/post/), [tax/get GET](http://developer.avalara.com/api-docs/rest/tax/get), [tax/cancel POST](http://developer.avalara.com/api-docs/rest/tax/cancel), and [address/validate GET](http://developer.avalara.com/api-docs/rest/address-validation).
  
  For more information on the use of these methods and the AvaTax product, please visit our [developer site](http://developer.avalara.com/) or [homepage](http://www.avalara.com/)
@@ -27,7 +27,8 @@ Contents:
 
 Dependencies:
 -----------
-- Java 
+- JDK 5.0 or later
+- [Jackson](https://github.com/FasterXML/jackson) is also required, and the pertinent libraries are included in /lib. It is provided here under the Apache License 2.0
 
 Requirements:
 ----------
