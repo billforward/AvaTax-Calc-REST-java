@@ -171,7 +171,7 @@ public class TaxSvc {
 	}
     public enum DetailLevel { Tax, Document, Line, Diagnostic };
     public enum DocType 
-    { SalesOrder, SalesInvoice, ReturnOrder, ReturnInvoice, PurchaseOrder, PurchaseInvoice }
+    { SalesOrder, SalesInvoice, ReturnOrder, ReturnInvoice, PurchaseOrder, PurchaseInvoice, ReverseChargeOrder, ReverseChargeInvoice }
 	public GeoTaxResult Ping() {
 		return EstimateTax(47.627935,-122.51702,10.0);
 	};
