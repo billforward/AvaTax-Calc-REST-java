@@ -1,15 +1,30 @@
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import TaxSvc.*;
 import TaxSvc.CancelTaxRequest.CancelCode;
 import TaxSvc.CommonResponse.*;
 
 public class CancelTaxTest{
-	 public static void Test()
-     {
-         // Header Level Elements
-         // Required Header Level Elements
-         String accountNumber = "1234567890";
-         String licenseKey = "A1B2C3D4E5F6G7H8";
-         String serviceURL = "https://development.avalara.net";
+	public static void Test() throws IOException
+    {	
+		Properties properties = new Properties();
+   
+	    try {
+	    	InputStream in = InputStream.class.getResourceAsStream("/configuration.properties");
+	    	properties.load(in);
+	    	in.close();
+	    } catch (IOException e) {
+	      System.out.println("Unable to locate configuration.properties");
+	      throw e;
+	    }
+
+        // Header Level Elements
+        // Required Header Level Elements
+        String accountNumber = properties.getProperty("configuration.account");
+        String licenseKey = properties.getProperty("configuration.license");
+        String serviceURL = properties.getProperty("configuration.url");
 
          TaxSvc taxSvc = new TaxSvc(accountNumber, licenseKey, serviceURL);
 
