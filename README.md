@@ -1,10 +1,11 @@
 AvaTax-REST-Java
 =====================
+[Other Samples](http://developer.avalara.com/api-docs/api-sample-code)
 
 This is a set of Java sample requests demonstrating the [AvaTax REST API](http://developer.avalara.com/api-docs/rest) methods:
  [tax/get POST](http://developer.avalara.com/api-docs/rest/tax/post/), [tax/get GET](http://developer.avalara.com/api-docs/rest/tax/get), [tax/cancel POST](http://developer.avalara.com/api-docs/rest/tax/cancel), and [address/validate GET](http://developer.avalara.com/api-docs/rest/address-validation).
  
- For more information on the use of these methods and the AvaTax product, please visit our [developer site](http://developer.avalara.com/) or [homepage](http://www.avalara.com/)
+ For more information on the use of these methods and the AvaTax product, please visit our [developer site](http://developer.avalara.com/) or [Avalara homepage](http://www.avalara.com/)
  
 Contents:
 ----------
