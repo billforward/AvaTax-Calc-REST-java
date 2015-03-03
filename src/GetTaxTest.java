@@ -53,6 +53,7 @@ public class GetTaxTest {
          // Situational Request Parameters
          // getTaxRequest.CustomerUsageType = "G";
          // getTaxRequest.ExemptionNo = "12345";
+         // getTaxRequest.BusinessIdentificationNo = "234243";
          // getTaxRequest.Discount = new BigDecimal(50);
          // getTaxRequest.TaxOverride = new TaxOverrideDef();
          // getTaxRequest.TaxOverride.TaxOverrideType = "TaxDate";
@@ -106,6 +107,7 @@ public class GetTaxTest {
 
          // Situational Request Parameters
          // line1.CustomerUsageType = "L";
+         // line1.BusinessIdentificationNo = "234243";
          // line1.Discounted = true;
          // line1.TaxIncluded = true;
          // line1.TaxOverride = new TaxOverrideDef();

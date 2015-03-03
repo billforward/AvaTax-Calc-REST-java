@@ -16,6 +16,7 @@ public class Line{
     public Boolean TaxIncluded;
     public String Ref1;
     public String Ref2;
+    public String BusinessIdentificationNo;
     
     
 }
