@@ -17,6 +17,7 @@ public class Line{
     public String Ref1;
     public String Ref2;
     public String BusinessIdentificationNo;
+    public TaxOverrideDef TaxOverride;
     
     
 }
