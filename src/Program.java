@@ -12,7 +12,7 @@ public class Program {
          }
          catch (Exception ex)
          { 
-             System.out.println("An Exception Occured: " + ex.getMessage()); 
+             System.out.println("An Exception Occurred: " + ex.getMessage()); 
          }
          finally
          {
