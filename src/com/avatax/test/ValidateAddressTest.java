@@ -1,9 +1,13 @@
+package com.avatax.test;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import AddressSvc.CommonResponse.*;
-import AddressSvc.*;
+import com.avatax.address.Address;
+import com.avatax.address.AddressSvc;
+import com.avatax.address.CommonResponse.*;
+import com.avatax.address.ValidateResult;
 
 public class ValidateAddressTest {
 	public static void Test() throws IOException

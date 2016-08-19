@@ -1,4 +1,4 @@
-package TaxSvc;
+package com.avatax.tax;
 
 public class TaxAddress //Nested in GetTaxResult object
 {

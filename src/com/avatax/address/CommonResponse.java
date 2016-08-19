@@ -1,4 +1,4 @@
-package AddressSvc;
+package com.avatax.address;
 
 public class CommonResponse {
 	public static class Message{

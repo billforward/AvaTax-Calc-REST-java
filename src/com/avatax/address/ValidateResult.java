@@ -1,6 +1,4 @@
-package AddressSvc;
-
-import AddressSvc.CommonResponse;
+package com.avatax.address;
 
 public class ValidateResult {
 	public Address Address;

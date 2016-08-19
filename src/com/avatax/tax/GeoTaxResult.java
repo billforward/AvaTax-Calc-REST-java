@@ -1,4 +1,4 @@
-package TaxSvc;
+package com.avatax.tax;
 
 public class GeoTaxResult // Result of tax/get verb GET
 {

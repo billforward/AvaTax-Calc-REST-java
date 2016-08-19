@@ -1,10 +1,14 @@
+package com.avatax.test;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import TaxSvc.*;
-import TaxSvc.CancelTaxRequest.CancelCode;
-import TaxSvc.CommonResponse.*;
+import com.avatax.tax.CancelTaxRequest;
+import com.avatax.tax.CancelTaxRequest.CancelCode;
+import com.avatax.tax.CancelTaxResult;
+import com.avatax.tax.CommonResponse.*;
+import com.avatax.tax.TaxSvc;
 
 public class CancelTaxTest{
 	public static void Test() throws IOException

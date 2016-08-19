@@ -1,7 +1,7 @@
-package TaxSvc;
+package com.avatax.tax;
 
-import TaxSvc.CommonResponse.Message;
-import TaxSvc.CommonResponse.SeverityLevel;
+import com.avatax.tax.CommonResponse.Message;
+import com.avatax.tax.CommonResponse.SeverityLevel;
 
 public class CancelTaxResult
 {

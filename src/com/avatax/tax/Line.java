@@ -1,4 +1,4 @@
-package TaxSvc;
+package com.avatax.tax;
 
 import java.math.BigDecimal;
 

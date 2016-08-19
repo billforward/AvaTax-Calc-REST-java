@@ -1,6 +1,4 @@
-package TaxSvc;
-
-import TaxSvc.TaxDetail;
+package com.avatax.tax;
 
 public class TaxLine //Nested in GetTaxResult object
 {

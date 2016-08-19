@@ -1,4 +1,4 @@
-package AddressSvc;
+package com.avatax.address;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;

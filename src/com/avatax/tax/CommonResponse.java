@@ -1,4 +1,4 @@
-package TaxSvc;
+package com.avatax.tax;
 
 public class CommonResponse {
 	public static class Message{

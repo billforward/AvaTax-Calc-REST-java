@@ -1,4 +1,6 @@
-public class Program {	
+package com.avatax.test;
+
+public class Program {
 	public static void main(String args[]){
 		 try
          {

@@ -1,3 +1,5 @@
+package com.avatax.test;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -6,10 +8,9 @@ import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.Properties;
 
-import AddressSvc.*;
-import TaxSvc.*;
-import TaxSvc.CommonResponse.*;
-
+import com.avatax.tax.*;
+import com.avatax.tax.CommonResponse.*;
+import com.avatax.address.Address;
 
 
 public class GetTaxTest {

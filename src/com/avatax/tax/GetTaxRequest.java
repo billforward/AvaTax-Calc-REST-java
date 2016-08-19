@@ -1,11 +1,11 @@
-package TaxSvc;
+package com.avatax.tax;
 
 
 import java.math.BigDecimal;
 import java.sql.Date;
 
-import AddressSvc.Address;
-import TaxSvc.TaxSvc.DocType;
+import com.avatax.address.Address;
+import com.avatax.tax.TaxSvc.DocType;
 
 public class GetTaxRequest {
 	//Required for tax calculation

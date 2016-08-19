@@ -1,5 +1,5 @@
-package TaxSvc;
-import TaxSvc.TaxSvc.DocType;
+package com.avatax.tax;
+import com.avatax.tax.TaxSvc.DocType;
 
 
 public class CancelTaxRequest {

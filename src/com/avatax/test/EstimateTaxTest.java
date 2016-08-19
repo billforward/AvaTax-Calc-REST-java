@@ -1,9 +1,13 @@
+package com.avatax.test;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import TaxSvc.*;
-import TaxSvc.CommonResponse.*;
+import com.avatax.tax.CommonResponse.*;
+import com.avatax.tax.GeoTaxResult;
+import com.avatax.tax.TaxDetail;
+import com.avatax.tax.TaxSvc;
 
 
 public class EstimateTaxTest {
