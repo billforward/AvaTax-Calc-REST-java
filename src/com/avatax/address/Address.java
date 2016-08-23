@@ -33,18 +33,13 @@ public class Address {
     public BigDecimal Longitude; //Input for GetTax only
     public String TaxRegionId; //Input for GetTax only
 	
-    public String toQuery(){ //Formats the address input information as a query string for address validation.
+    public String toQuery() throws UnsupportedEncodingException { //Formats the address input information as a query string for address validation.
     	String query = "";
     	String[][] addressinfo = {{"Line1","Line2","Line3","City","Region","PostalCode","Country"},{Line1, Line2, Line3, City, Region, PostalCode, Country}};
     	for (int i=0; i<7; i++)
     	{
 	        if(addressinfo[1][i] != null &&!addressinfo[1][i].isEmpty()){
-	        	try {
-					query = ampQuery(query) + addressinfo[0][i]+"="+ URLEncoder.encode(addressinfo[1][i], "UTF-8");
-				} catch (UnsupportedEncodingException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+                query = ampQuery(query) + addressinfo[0][i]+"="+ URLEncoder.encode(addressinfo[1][i], "UTF-8");
 	        }
     	}
 
