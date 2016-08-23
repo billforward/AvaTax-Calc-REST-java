@@ -4,10 +4,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import com.avatax.common.Message;
+import com.avatax.common.SeverityLevel;
 import com.avatax.tax.CancelTaxRequest;
 import com.avatax.tax.CancelTaxRequest.CancelCode;
 import com.avatax.tax.CancelTaxResult;
-import com.avatax.tax.CommonResponse.*;
 import com.avatax.tax.TaxSvc;
 
 public class CancelTaxTest{

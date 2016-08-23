@@ -1,7 +1,7 @@
 package com.avatax.tax;
 
-import com.avatax.tax.CommonResponse.Message;
-import com.avatax.tax.CommonResponse.SeverityLevel;
+import com.avatax.common.Message;
+import com.avatax.common.SeverityLevel;
 
 public class CancelTaxResult
 {

@@ -1,6 +1,7 @@
 package com.avatax.test;
 
-import com.avatax.tax.CommonResponse.*;
+import com.avatax.common.Message;
+import com.avatax.common.SeverityLevel;
 import com.avatax.tax.GeoTaxResult;
 import com.avatax.tax.TaxSvc;
 

@@ -1,5 +1,8 @@
 package com.avatax.tax;
 
+import com.avatax.common.Message;
+import com.avatax.common.SeverityLevel;
+
 import java.util.Date;
 
 
@@ -18,8 +21,8 @@ public class GetTaxResult {
     public TaxLine[] TaxLines;
     public TaxLine[] TaxSummary;
     public TaxAddress[] TaxAddresses;
-    public CommonResponse.SeverityLevel ResultCode;
-    public CommonResponse.Message[] Messages;
+    public SeverityLevel ResultCode;
+    public Message[] Messages;
     
     public String getDocCode(){return DocCode;}
     public Date getDocDate(){return DocDate;}
@@ -34,8 +37,8 @@ public class GetTaxResult {
     public TaxLine[] getTaxLines(){return TaxLines;}
     public TaxLine[] getTaxSummary(){return TaxSummary;}
     public TaxAddress[] getTaxAddresses(){return TaxAddresses;}
-	public CommonResponse.SeverityLevel getResultCode(){return ResultCode;}
-	public CommonResponse.Message[] getMessages(){return Messages;}
+	public SeverityLevel getResultCode(){return ResultCode;}
+	public Message[] getMessages(){return Messages;}
     
     public void setDocCode(String docCode){DocCode = docCode;}
     public void setDocDate(Date docDate){DocDate = docDate;}
@@ -50,8 +53,8 @@ public class GetTaxResult {
     public void setTaxLines(TaxLine[] taxLines){TaxLines = taxLines;}
     public void setTaxSummary(TaxLine[] taxSummary){TaxSummary = taxSummary;}
     public void setTaxAddresses(TaxAddress[] taxAddresses){TaxAddresses = taxAddresses;}
-	public void setResultCode(CommonResponse.SeverityLevel resultCode){ResultCode = resultCode;}
-	public void setMessages(CommonResponse.Message[] messages){Messages = messages;}
+	public void setResultCode(SeverityLevel resultCode){ResultCode = resultCode;}
+	public void setMessages(Message[] messages){Messages = messages;}
 
 	
 }

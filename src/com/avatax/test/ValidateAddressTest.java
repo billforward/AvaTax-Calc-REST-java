@@ -6,8 +6,9 @@ import java.util.Properties;
 
 import com.avatax.address.Address;
 import com.avatax.address.AddressSvc;
-import com.avatax.address.CommonResponse.*;
 import com.avatax.address.ValidateResult;
+import com.avatax.common.Message;
+import com.avatax.common.SeverityLevel;
 
 public class ValidateAddressTest {
 	public static void Test() throws IOException
