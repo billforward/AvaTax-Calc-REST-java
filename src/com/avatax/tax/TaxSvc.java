@@ -12,9 +12,9 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class TaxSvc {
-	private String accountNum;
-	private String license;
-	private String svcURL;
+	private final String accountNum;
+	private final String license;
+	private final String svcURL;
 
 	public TaxSvc(String accountNumber, String licenseKey, String serviceURL)
 	{
@@ -83,7 +83,6 @@ public class TaxSvc {
 		//Connect to URL with authorization header, request content.
 		URL url = new URL(urlPath);
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-		conn.setRequestMethod("POST");
 		conn.setDoOutput(true);
 		conn.setDoInput(true);
 		conn.setUseCaches(false);
@@ -93,6 +92,7 @@ public class TaxSvc {
 		conn.setRequestProperty ("Authorization", encoded); //Add authorization header
 
 		if(req != null) {
+		    conn.setRequestMethod("POST");
 			conn.setRequestProperty("Content-Type",
 					"application/x-www-form-urlencoded");
 
